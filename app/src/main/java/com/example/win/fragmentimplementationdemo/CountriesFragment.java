@@ -17,9 +17,7 @@ import android.widget.Toast;
 
 import java.lang.ref.WeakReference;
 
-/**
- * Created by anildeshpande on 10/25/17.
- */
+
 
 public class CountriesFragment extends Fragment{
 
@@ -36,8 +34,10 @@ public class CountriesFragment extends Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+
         rootView = inflater.inflate(R.layout.fragment_countries,container,false);
         initUI();
+
         return rootView;
     }
 
@@ -58,6 +58,7 @@ public class CountriesFragment extends Fragment{
 
         countryNamesAdapter = new ArrayAdapter<String>(context,android.R.layout.simple_list_item_1,countries);
         listViewCountries.setAdapter(countryNamesAdapter);
+
 
         listViewCountries.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
